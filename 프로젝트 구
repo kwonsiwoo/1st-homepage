@@ -1,0 +1,75 @@
+baropage/
+├── app/
+│   ├── layout.tsx                  # 루트 레이아웃 (폰트, 메타데이터, Providers)
+│   ├── page.tsx                    # 메인 페이지 (Hero + 강점 + 포트폴리오)
+│   ├── globals.css                 # Tailwind 전역 스타일
+│   │
+│   ├── estimate/
+│   │   └── page.tsx                # 예상 견적 계산기 페이지
+│   │
+│   ├── contact/
+│   │   └── page.tsx                # 문의하기 페이지
+│   │
+│   └── admin/
+│       ├── layout.tsx              # 관리자 레이아웃 (인증 가드)
+│       ├── page.tsx                # 관리자 대시보드 (문의 목록)
+│       └── login/
+│           └── page.tsx            # 관리자 로그인 페이지
+│
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx              # 공통 헤더 + 네비게이션
+│   │   └── Footer.tsx              # 공통 푸터
+│   │
+│   ├── home/
+│   │   ├── HeroSection.tsx         # 메인 히어로 섹션
+│   │   ├── StrengthSection.tsx     # 서비스 강점 3가지
+│   │   └── PortfolioGrid.tsx       # 포트폴리오 그리드
+│   │
+│   ├── estimate/
+│   │   ├── EstimateCalculator.tsx  # 견적 계산기 메인 컴포넌트
+│   │   ├── SiteTypeSelector.tsx    # 사이트 유형 선택
+│   │   └── FeatureSelector.tsx     # 추가 기능 선택
+│   │
+│   ├── contact/
+│   │   └── ContactForm.tsx         # 문의 폼 (Supabase 연동)
+│   │
+│   ├── admin/
+│   │   ├── InquiryTable.tsx        # 문의 목록 테이블
+│   │   └── InquiryDetailModal.tsx  # 문의 상세 모달
+│   │
+│   └── ui/                         # Shadcn UI 자동 생성 컴포넌트
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── badge.tsx
+│       ├── dialog.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── select.tsx
+│       ├── textarea.tsx
+│       └── table.tsx
+│
+├── lib/
+│   ├── supabase/
+│   │   ├── client.ts               # 브라우저용 Supabase 클라이언트
+│   │   ├── server.ts               # 서버용 Supabase 클라이언트
+│   │   └── types.ts                # DB 타입 정의 (자동생성 or 수동)
+│   └── utils.ts                    # cn() 등 공통 유틸
+│
+├── constants/
+│   ├── portfolio.ts                # 포트폴리오 데이터
+│   └── pricing.ts                  # 가격 정책 데이터
+│
+├── types/
+│   └── index.ts                    # 전역 TypeScript 타입
+│
+├── public/
+│   ├── images/
+│   │   └── portfolio/              # 포트폴리오 썸네일 이미지
+│   └── logo.svg
+│
+├── .env.local                      # Supabase 환경 변수
+├── next.config.ts
+├── tailwind.config.ts
+├── components.json                 # Shadcn UI 설정
+└── tsconfig.json
